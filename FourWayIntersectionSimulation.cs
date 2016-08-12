@@ -55,22 +55,11 @@ namespace ConsoleApplication
             {
                 string vPreseneceString;
                 string lightColourString;
-                if(intersection[i].vehiclePresent)
-                {
-                    vPreseneceString = "Vehicle Present";
-                }
-                else
-                {
-                    vPreseneceString = "Vehicle Not Present";
-                }
-                if (intersection[i].light)
-                {
-                    lightColourString = "Green - GO!";
-                }
-                else
-                {
-                    lightColourString = "Red";
-                }
+
+                vPreseneceString = (intersection[i].vehiclePresent) ? "Vehicle Present": "Vehicle Not Present";
+
+                lightColourString = (intersection[i].light) ? "Green - GO!" : lightColourString = "Red";
+
                 Console.WriteLine(intersection[i].direction + ": \n\t=>" + vPreseneceString + "\n\t=>" + lightColourString + "\n\t=>Priority:\n\t\t" + intersection[i].priority);
             }
             Console.WriteLine("============\n\n");
